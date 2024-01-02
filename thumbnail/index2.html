@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>thumbnail</title>
+    <style>
+        body{
+            margin: 0;
+            padding: 0;
+        }
+        .imgBox{
+            width: 720px;
+            margin: 50px auto 20px ;
+        }
+        .imgBox img{ 
+            width: 100%;
+            border: 4px solid #fff;
+            box-shadow: 0 5px 25px rgba(0,0,0,.5);
+        }
+
+        ul.thumb{
+            margin: 0px auto;
+            padding: 0;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+        ul.thumb li{
+            list-style: none;
+            margin: 0 10px;
+        }
+        ul.thumb li img{
+            border: 4px solid #fff;
+            box-shadow: 0 5px 25px rgba(0,0,0,.5);
+        }
+    </style>
+</head>
+<body>
+    <div class="imgBox"><img src="img/ahmed-6OjD5RNr0Ic-unsplash.jpg" alt=""></div>
+   <ul class = "thumb">
+    <li><a href="./img/ahmed-6OjD5RNr0Ic-unsplash.jpg" target="imgBox"><img src="./img/ahmed-6OjD5RNr0Ic-unsplash.jpg" alt="" width= "120px";></a></li>
+    <li><a href="./img/aleksandr-popov-lXaOSpd_UQw-unsplash.jpg" target="imgBox"><img src="./img/aleksandr-popov-lXaOSpd_UQw-unsplash.jpg" alt="" width= "120px";></a></li>
+    <li><a href="./img/alex-gruber-JZzxrzgZ3bs-unsplash.jpg" target="imgBox"><img src="./img/alex-gruber-JZzxrzgZ3bs-unsplash.jpg" alt="" width= "120px";></a></li>
+    <li><a href="./img/alexander-grey-H_FbsufW7yw-unsplash.jpg" target="imgBox"><img src="./img/alexander-grey-H_FbsufW7yw-unsplash.jpg" alt="" width= "120px";></a></li>
+    <li><a href="./img/dylan-shaw-6_t8R-uCW3I-unsplash.jpg" target="imgBox"><img src="./img/elice-moore-E--AUpYXbjM-unsplash.jpg" alt="" width= "120px";></a></li>
+    <li><a href="./img/gabby-orcutt-7E29j_4GBNI-unsplash.jpg" target="imgBox"><img src="./img/evie-s-ti6vZMUC6S4-unsplash.jpg" alt="" width= "120px";></a></li>
+   </ul> 
+   <script src="https://code.jquery.com/jquery-2.2.4.js"></script>
+   <script type="text/javascript">
+    $(document).ready(function(){
+        $('.thumb a').click(function(e){
+            e.preventDefault();
+            $('.imgBox img').attr('src',$(this).attr("href"))
+        })
+    })
+   </script>
+</body>
+</html>
